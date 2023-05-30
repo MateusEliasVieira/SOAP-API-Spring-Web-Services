@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://localhost/soap"
+    xmlns:tns="http://localhost/soap"
+    elementFormDefault="qualified">
+
+    <xs:complexType name="PessoaModel">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" />
+            <xs:element name="nome" type="xs:string" />
+            <xs:element name="sobrenome" type="xs:string" />
+            <xs:element name="profissao" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
