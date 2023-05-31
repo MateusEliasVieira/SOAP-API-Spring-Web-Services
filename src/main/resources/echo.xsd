@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://localhost/soap"
+           xmlns="http://localhost/soap"
+           xmlns:tns="http://localhost/soap"
+           elementFormDefault="qualified">
+
+    <xs:element name="PessoaModel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element name="sobrenome" type="xs:string"/>
+                <xs:element name="profissao" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="InserirPessoaRequest">
+	    <xs:complexType>
+	        <xs:sequence>
+	            <xs:element name="filtro" type="tns:PessoaModel" minOccurs="0"/>
+	        </xs:sequence>
+	    </xs:complexType>
+	</xs:element>
+    
+	<xs:element name="ListarPessoaRequest">
+	    <xs:complexType>
+	        <xs:sequence>
+	            <xs:element name="filtro" type="xs:string" minOccurs="0"/>
+	        </xs:sequence>
+	    </xs:complexType>
+	</xs:element>
+      
+</xs:schema>
+
+
